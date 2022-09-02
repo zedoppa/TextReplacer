@@ -63,6 +63,16 @@ namespace TextReplacer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap dark_swap_24 {
+            get {
+                object obj = ResourceManager.GetObject("dark-swap_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap default_close_16 {
             get {
                 object obj = ResourceManager.GetObject("default-close_16", resourceCulture);

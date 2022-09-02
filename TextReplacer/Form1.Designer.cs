@@ -1,7 +1,7 @@
 ﻿
 namespace TextReplacer
 {
-    partial class TextReplacer
+    partial class windowPanel
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@ namespace TextReplacer
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(windowPanel));
             this.ReplaceSymbolPanel = new System.Windows.Forms.Panel();
             this.sourceGroup = new System.Windows.Forms.GroupBox();
             this.clearBtn = new System.Windows.Forms.Button();
@@ -36,7 +37,7 @@ namespace TextReplacer
             this.resultGroup = new System.Windows.Forms.GroupBox();
             this.resultTextBox = new System.Windows.Forms.TextBox();
             this.copyBtn = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.symbolGroup = new System.Windows.Forms.Panel();
             this.switchBtn = new System.Windows.Forms.Button();
             this.findBox = new System.Windows.Forms.TextBox();
             this.txtFind = new System.Windows.Forms.Label();
@@ -48,20 +49,24 @@ namespace TextReplacer
             this.minimizeBtn = new System.Windows.Forms.Button();
             this.title = new System.Windows.Forms.Label();
             this.creditsLabel = new System.Windows.Forms.Label();
+            this.bgPanel = new System.Windows.Forms.Panel();
+            this.themeLabel = new System.Windows.Forms.Label();
+            this.themeBox = new System.Windows.Forms.ComboBox();
             this.ReplaceSymbolPanel.SuspendLayout();
             this.sourceGroup.SuspendLayout();
             this.resultGroup.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.symbolGroup.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            this.bgPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // ReplaceSymbolPanel
             // 
             this.ReplaceSymbolPanel.Controls.Add(this.sourceGroup);
             this.ReplaceSymbolPanel.Controls.Add(this.resultGroup);
-            this.ReplaceSymbolPanel.Controls.Add(this.panel1);
+            this.ReplaceSymbolPanel.Controls.Add(this.symbolGroup);
             this.ReplaceSymbolPanel.Controls.Add(this.replaceBtn);
-            this.ReplaceSymbolPanel.Location = new System.Drawing.Point(11, 46);
+            this.ReplaceSymbolPanel.Location = new System.Drawing.Point(17, 47);
             this.ReplaceSymbolPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ReplaceSymbolPanel.Name = "ReplaceSymbolPanel";
             this.ReplaceSymbolPanel.Size = new System.Drawing.Size(527, 609);
@@ -71,6 +76,7 @@ namespace TextReplacer
             // 
             this.sourceGroup.Controls.Add(this.clearBtn);
             this.sourceGroup.Controls.Add(this.originalTextBox);
+            this.sourceGroup.ForeColor = System.Drawing.Color.Black;
             this.sourceGroup.Location = new System.Drawing.Point(13, 16);
             this.sourceGroup.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.sourceGroup.Name = "sourceGroup";
@@ -88,11 +94,13 @@ namespace TextReplacer
             this.clearBtn.Size = new System.Drawing.Size(74, 27);
             this.clearBtn.TabIndex = 7;
             this.clearBtn.Text = "Clear";
-            this.clearBtn.UseVisualStyleBackColor = true;
+            this.clearBtn.UseVisualStyleBackColor = false;
             this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
             // 
             // originalTextBox
             // 
+            this.originalTextBox.BackColor = System.Drawing.Color.White;
+            this.originalTextBox.ForeColor = System.Drawing.Color.Black;
             this.originalTextBox.Location = new System.Drawing.Point(12, 22);
             this.originalTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.originalTextBox.Multiline = true;
@@ -116,6 +124,8 @@ namespace TextReplacer
             // 
             // resultTextBox
             // 
+            this.resultTextBox.BackColor = System.Drawing.Color.White;
+            this.resultTextBox.ForeColor = System.Drawing.Color.Black;
             this.resultTextBox.Location = new System.Drawing.Point(12, 22);
             this.resultTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.resultTextBox.Multiline = true;
@@ -136,19 +146,19 @@ namespace TextReplacer
             this.copyBtn.UseVisualStyleBackColor = true;
             this.copyBtn.Click += new System.EventHandler(this.copyBtn_Click);
             // 
-            // panel1
+            // symbolGroup
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.switchBtn);
-            this.panel1.Controls.Add(this.findBox);
-            this.panel1.Controls.Add(this.txtFind);
-            this.panel1.Controls.Add(this.replaceBox);
-            this.panel1.Controls.Add(this.txtReplace);
-            this.panel1.Location = new System.Drawing.Point(103, 262);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(271, 75);
-            this.panel1.TabIndex = 8;
+            this.symbolGroup.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.symbolGroup.Controls.Add(this.switchBtn);
+            this.symbolGroup.Controls.Add(this.findBox);
+            this.symbolGroup.Controls.Add(this.txtFind);
+            this.symbolGroup.Controls.Add(this.replaceBox);
+            this.symbolGroup.Controls.Add(this.txtReplace);
+            this.symbolGroup.Location = new System.Drawing.Point(103, 262);
+            this.symbolGroup.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.symbolGroup.Name = "symbolGroup";
+            this.symbolGroup.Size = new System.Drawing.Size(254, 75);
+            this.symbolGroup.TabIndex = 8;
             // 
             // switchBtn
             // 
@@ -169,6 +179,8 @@ namespace TextReplacer
             // 
             // findBox
             // 
+            this.findBox.BackColor = System.Drawing.Color.White;
+            this.findBox.ForeColor = System.Drawing.Color.Black;
             this.findBox.Location = new System.Drawing.Point(13, 34);
             this.findBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.findBox.MaxLength = 5;
@@ -188,6 +200,8 @@ namespace TextReplacer
             // 
             // replaceBox
             // 
+            this.replaceBox.BackColor = System.Drawing.Color.White;
+            this.replaceBox.ForeColor = System.Drawing.Color.Black;
             this.replaceBox.Location = new System.Drawing.Point(175, 34);
             this.replaceBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.replaceBox.MaxLength = 5;
@@ -213,7 +227,7 @@ namespace TextReplacer
             this.replaceBtn.Size = new System.Drawing.Size(74, 27);
             this.replaceBtn.TabIndex = 6;
             this.replaceBtn.Text = "Replace";
-            this.replaceBtn.UseVisualStyleBackColor = true;
+            this.replaceBtn.UseVisualStyleBackColor = false;
             this.replaceBtn.Click += new System.EventHandler(this.replaceBtn_Click);
             // 
             // flowLayoutPanel1
@@ -222,7 +236,7 @@ namespace TextReplacer
             this.flowLayoutPanel1.Controls.Add(this.closeBtn);
             this.flowLayoutPanel1.Controls.Add(this.minimizeBtn);
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(388, 0);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(395, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(164, 28);
             this.flowLayoutPanel1.TabIndex = 12;
@@ -244,7 +258,7 @@ namespace TextReplacer
             // 
             // minimizeBtn
             // 
-            this.minimizeBtn.BackColor = System.Drawing.Color.Transparent;
+            this.minimizeBtn.BackColor = System.Drawing.Color.White;
             this.minimizeBtn.FlatAppearance.BorderSize = 0;
             this.minimizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.minimizeBtn.ForeColor = System.Drawing.Color.Transparent;
@@ -261,12 +275,12 @@ namespace TextReplacer
             // 
             this.title.AutoSize = true;
             this.title.Font = new System.Drawing.Font("Open Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.title.Location = new System.Drawing.Point(12, 5);
+            this.title.Location = new System.Drawing.Point(2, 3);
             this.title.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(14, 18);
+            this.title.Size = new System.Drawing.Size(112, 18);
             this.title.TabIndex = 13;
-            this.title.Text = string.Format("{0} v{1}", System.Windows.Forms.Application.ProductName, System.Windows.Forms.Application.ProductVersion);
+            this.title.Text = "TextReplacer v1.5";
             // 
             // creditsLabel
             // 
@@ -275,7 +289,7 @@ namespace TextReplacer
             this.creditsLabel.BackColor = System.Drawing.Color.Black;
             this.creditsLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.creditsLabel.ForeColor = System.Drawing.Color.White;
-            this.creditsLabel.Location = new System.Drawing.Point(0, 666);
+            this.creditsLabel.Location = new System.Drawing.Point(-1, 667);
             this.creditsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.creditsLabel.Name = "creditsLabel";
             this.creditsLabel.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
@@ -284,34 +298,74 @@ namespace TextReplacer
             this.creditsLabel.Text = "Made by TheRakuSama";
             this.creditsLabel.Click += new System.EventHandler(this.creditsLabel_Click);
             // 
-            // TextReplacer
+            // bgPanel
+            // 
+            this.bgPanel.BackColor = System.Drawing.Color.White;
+            this.bgPanel.Controls.Add(this.themeLabel);
+            this.bgPanel.Controls.Add(this.themeBox);
+            this.bgPanel.Controls.Add(this.ReplaceSymbolPanel);
+            this.bgPanel.Controls.Add(this.creditsLabel);
+            this.bgPanel.Controls.Add(this.title);
+            this.bgPanel.Controls.Add(this.flowLayoutPanel1);
+            this.bgPanel.Location = new System.Drawing.Point(12, 12);
+            this.bgPanel.Name = "bgPanel";
+            this.bgPanel.Size = new System.Drawing.Size(559, 692);
+            this.bgPanel.TabIndex = 14;
+            this.bgPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bgPanel_MouseDown);
+            // 
+            // themeLabel
+            // 
+            this.themeLabel.AutoSize = true;
+            this.themeLabel.Font = new System.Drawing.Font("Open Sans", 9F, System.Drawing.FontStyle.Bold);
+            this.themeLabel.Location = new System.Drawing.Point(346, 666);
+            this.themeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.themeLabel.Name = "themeLabel";
+            this.themeLabel.Size = new System.Drawing.Size(56, 17);
+            this.themeLabel.TabIndex = 15;
+            this.themeLabel.Text = "Theme:";
+            // 
+            // themeBox
+            // 
+            this.themeBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.themeBox.FormattingEnabled = true;
+            this.themeBox.Items.AddRange(new object[] {
+            "Default",
+            "Dark"});
+            this.themeBox.Location = new System.Drawing.Point(407, 662);
+            this.themeBox.Name = "themeBox";
+            this.themeBox.Size = new System.Drawing.Size(121, 23);
+            this.themeBox.TabIndex = 14;
+            this.themeBox.SelectedIndexChanged += new System.EventHandler(this.themeBox_SelectedIndexChanged);
+            // 
+            // windowPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(551, 691);
-            this.Controls.Add(this.creditsLabel);
-            this.Controls.Add(this.title);
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.ReplaceSymbolPanel);
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(583, 716);
+            this.Controls.Add(this.bgPanel);
             this.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.MaximizeBox = false;
-            this.Name = "TextReplacer";
+            this.Name = "windowPanel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TextReplacer";
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TextReplacer_MouseDown);
+            this.Load += new System.EventHandler(this.windowPanel_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.windowPanel_MouseDown);
             this.ReplaceSymbolPanel.ResumeLayout(false);
             this.sourceGroup.ResumeLayout(false);
             this.sourceGroup.PerformLayout();
             this.resultGroup.ResumeLayout(false);
             this.resultGroup.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.symbolGroup.ResumeLayout(false);
+            this.symbolGroup.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.bgPanel.ResumeLayout(false);
+            this.bgPanel.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -323,7 +377,7 @@ namespace TextReplacer
         private System.Windows.Forms.Label txtReplace;
         private System.Windows.Forms.TextBox findBox;
         private System.Windows.Forms.Label txtFind;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel symbolGroup;
         private System.Windows.Forms.Button clearBtn;
         private System.Windows.Forms.Button replaceBtn;
         private System.Windows.Forms.TextBox resultTextBox;
@@ -336,6 +390,9 @@ namespace TextReplacer
         private System.Windows.Forms.GroupBox resultGroup;
         private System.Windows.Forms.Label title;
         private System.Windows.Forms.Label creditsLabel;
+        private System.Windows.Forms.Panel bgPanel;
+        private System.Windows.Forms.ComboBox themeBox;
+        private System.Windows.Forms.Label themeLabel;
     }
 }
 

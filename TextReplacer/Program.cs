@@ -15,7 +15,7 @@ namespace TextReplacer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TextReplacer());
+            Application.Run(new windowPanel());
         }
     }
 }

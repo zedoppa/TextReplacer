@@ -86,6 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app-logo.ico" />
+    <None Include="img\dark-swap_24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
